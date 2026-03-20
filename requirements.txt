@@ -29,3 +29,6 @@ numpy
 scikit-learn
 sentence-transformers 
 torch
+
+#UI
+streamlit
