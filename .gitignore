@@ -1,0 +1,6 @@
+/LangChain_Models/.env
+/LangChain_Models/venv312
+/LangChain_Models/__pycache__
+/LangChain_Models/.vscode
+/LangChain_Models/.idea
+/LangChain_Models/.pytest_cache
