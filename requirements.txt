@@ -6,6 +6,9 @@ langchain-core
 langchain-openai
 openai
 
+# Groq Integration
+langchain_groq
+
 # Anthropic Integration
 langchain-anthropic
 
@@ -24,3 +27,5 @@ python-dotenv
 # Machine Learning Utilities
 numpy
 scikit-learn
+sentence-transformers 
+torch
