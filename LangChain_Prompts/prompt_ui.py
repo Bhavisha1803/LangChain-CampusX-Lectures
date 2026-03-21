@@ -17,21 +17,14 @@ style_input = st.selectbox( "Select Explanation Style", ["Beginner-Friendly", "T
 
 length_input = st.selectbox( "Select Explanation Length", ["Short (1-2 paragraphs)", "Medium (3-5 paragraphs)", "Long (detailed explanation)"] )
 
-#designing prompt template 
-template = PromptTemplate(
-    template ="" \
-    "You are a research assistant that provides explanations of research papers in a specified style and length. " \
-    "You have to provide summarisation for {paper} research paper. " \
-    "The explanation should be in {style} style and should be {length} in length.",
-input_variables=["paper", "style", "length"]
-)
+template = load_prompt("template.json")
 
 #filling the prompt template with user inputs
-prompt = template.invoke({
-    "paper": paper_input,
-    "style": style_input,
-    "length": length_input
-})
+# prompt = template.invoke({
+#     "paper": paper_input,
+#     "style": style_input,
+#     "length": length_input
+# })
 
 model = ChatGroq(
     model="llama-3.3-70b-versatile",    
@@ -39,6 +32,11 @@ model = ChatGroq(
 
 
 if st.button('Summarize'):
-    result = model.invoke(prompt.to_string())
+    chain = template | model
+    result = chain.invoke({
+        "paper": paper_input,
+        "style": style_input,
+        "length": length_input
+    })
     st.write(result.content)
 
