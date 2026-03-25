@@ -1,6 +1,7 @@
 # LangChain Core
 langchain
 langchain-core
+langchain_community
 
 # OpenAI Integration
 langchain-openai
@@ -30,6 +31,8 @@ scikit-learn
 sentence-transformers 
 torch
 pydantic
+pypdf
+unstructured
 
 #UI
 streamlit
