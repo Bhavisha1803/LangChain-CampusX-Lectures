@@ -19,7 +19,9 @@ prompt1 = PromptTemplate(
     input_variables=["topic"]
 )
 
-report_generator_chain = RunnableSequence(prompt1, model, parser)    
+report_generator_chain = prompt1 | model | parser
+#this is LCEL: we can create a chain using the | operator as well instead of RunnableSequence
+# LCEL stands for LangChain Expression Language and it provides a more concise and readable way to create chains compared to using RunnableSequence   
 
 prompt2 = PromptTemplate(
     template="Summarize the report: {report}?",
