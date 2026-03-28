@@ -3,10 +3,13 @@ langchain
 langchain-core
 langchain_community
 langchain_experimental
+langchain-chroma
 
 # OpenAI Integration
 langchain-openai
 openai
+tiktoken
+
 
 # Groq Integration
 langchain_groq
@@ -34,6 +37,7 @@ torch
 pydantic
 pypdf
 unstructured
+chromadb
 
 #UI
 streamlit
