@@ -45,3 +45,7 @@ youtube-transcript-api
 #UI
 streamlit
 grandalf
+
+#Tools
+duckduckgo-search 
+ddgs
