@@ -49,3 +49,4 @@ grandalf
 #Tools
 duckduckgo-search 
 ddgs
+requests
