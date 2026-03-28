@@ -38,6 +38,8 @@ pydantic
 pypdf
 unstructured
 chromadb
+faiss-cpu 
+wikipedia
 
 #UI
 streamlit
