@@ -40,6 +40,7 @@ unstructured
 chromadb
 faiss-cpu 
 wikipedia
+youtube-transcript-api
 
 #UI
 streamlit
